@@ -1,0 +1,95 @@
+.upload {
+  background: rgb(255, 255, 255);
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #cdffe4;
+  border: 1px solid #00dd67;
+  color: #000000;
+}
+
+.btn-submit {
+  float: right;
+}
+
+.upload .btn {
+  padding: 0.2rem .7rem !important;
+}
+
+.upload .btn:focus {
+  outline: 0;
+}
+
+.max-width {
+  padding: 0 80px;
+}
+
+.upload-img {
+  width: 150px;
+  height: 180px;
+  padding-bottom: 20px;
+  background: white;
+  box-sizing: border-box;
+}
+
+.remove-img {
+  border-radius: 20px;
+  background: rgb(255, 0, 0);
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  color: #000000;
+  border: none;
+  font-size: 20px;
+  padding: 3px 2px 5px 2px;
+}
+
+.displayNone {
+  display: none
+}
+
+@media screen and (max-width: 1100px) {
+  .custom-file-upload {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+
+}
+
+@media screen and (max-width: 915px) {
+  .custom-file-upload {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+
+}
+
+@media screen and (max-width: 760px) {
+  .custom-file-upload {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+
+}
+
+
+@media screen and (max-width: 575px) {
+  .custom-file-upload {
+    padding: 4px 10px;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+}

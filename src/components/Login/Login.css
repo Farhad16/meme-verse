@@ -1,0 +1,135 @@
+.signInAndSignUp {
+	text-align: center;
+	height: 600px;
+	margin-top: 30px;
+}
+
+.signUp {
+	border: 1px solid rgb(211, 206, 206);
+	width: 400px;
+	margin: auto;
+	padding-top: 30px;
+	border-radius: 5px;
+}
+
+.signUp h5 {
+	text-align: left;
+	margin-left: 28px;
+	font-weight: 700;
+	color: black;
+}
+
+.signUp input[type="text"],
+input[type="password"] {
+	border: none;
+	outline: none;
+	font-size: 12px;
+	font-weight: 500;
+	color: black;
+	width: 350px;
+	border-bottom: 1px solid rgb(189, 189, 189);
+	margin-top: 20px;
+	padding-bottom: 5px;
+}
+
+::placeholder {
+	color: black;
+}
+
+.createAccount {
+	border: none;
+	background-color: #535353;
+	color: #ffffff;
+	width: 350px;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 10px;
+	font-weight: 600;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.createAccount:focus {
+	outline: none;
+}
+
+.createAccount:hover {
+	color: #fda500;
+}
+
+.colorBrown {
+	color: rgb(255, 103, 1);
+	cursor: pointer;
+}
+
+.colorBlue {
+	color: #0070D4;
+}
+
+.colorBrown:hover {
+	text-decoration: underline;
+	text-decoration-color: rgb(255, 162, 23);
+}
+
+.note {
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.note a {
+	text-decoration: none !important;
+}
+
+.error {
+	font-size: 12px;
+	color: red;
+}
+
+.line {
+	height: 1px;
+	background-color: rgb(173, 169, 169);
+	width: 150px;
+	line-height: 0px;
+	margin: 5px 5px;
+}
+
+
+.alternativeLogin {
+	margin: 20px;
+}
+
+.alternativeLogin button {
+	font-size: 14px;
+	font-weight: 500;
+	margin-bottom: 10px;
+	border: 1px solid rgb(173, 169, 169);
+	padding: 5px;
+	border-radius: 20px;
+	width: 320px;
+	background-color: white;
+}
+
+.alternativeLogin button:focus {
+	outline: none;
+}
+
+
+
+.alternativeLogin img {
+	width: 25px;
+	float: left;
+}
+
+.sizing {
+	margin-top: 20px;
+	font-size: 14px;
+	font-weight: 400;
+	justify-content: space-between;
+	display: flex;
+	margin: 20px 30px 0px 30px;
+}
+
+#remember {
+	padding-right: 10px;
+}

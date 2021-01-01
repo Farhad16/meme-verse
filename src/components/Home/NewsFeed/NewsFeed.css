@@ -1,0 +1,11 @@
+.news-feed {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F0F2F5;
+}
+
+.feeds {
+  width: 50%
+}

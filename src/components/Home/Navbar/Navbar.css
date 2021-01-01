@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.nav-link {
+	color: #ffffff !important;
+	font-weight: 00;
+	transition: all .3s ease;
+}
+
+.navColor {
+	background: #535353;
+}
+
+.navbar {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	padding: 0 80px;
+}
+
+.nav-link:hover {
+	color: #F3C623 !important;
+}
+
+.navbar .navbar-collapse {
+	text-align: center;
+}
+
+
+.navbar-brand .name {
+	font-family: 'Pacifico', cursive;
+	font-size: 24px;
+	color: #ffffff;
+}
+
+.navbar-brand .colorYellow {
+	color: #fda500;
+	font-size: 24px;
+}
+
+.adminText {
+	color: #10f8ed !important;
+}
+
+.inactive {
+	cursor: default;
+}
+
+.inactive:hover {
+	color: #ffffff !important;
+}
+
+@media screen and (max-width: 650px) {
+	.navbar {
+		padding-top: 10px !important;
+		padding-bottom: 10px !important;
+		padding: 0 30px;
+	}
+}

@@ -1,24 +1,47 @@
-import logo from './logo.svg';
+import React, { createContext, useState } from 'react';
 import './App.css';
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Home from './components/Home/Home/Home';
+import NotFound from './components/NotFound/NotFound';
+import Login from './components/Login/Login';
+import ScrollToTop from "react-scroll-to-top";
+import Registration from './components/Login/Registration';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+
+
+export const UserContext = createContext()
+
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <Router>
+        <ScrollToTop smooth color='#ffffff' fontWeight='bold' />
+        <Switch>
+          <PrivateRoute exact path={["/home", "/"]}>
+            <Home />
+          </PrivateRoute>
+
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+
+          <Route path="/register">
+            <Registration />
+          </Route>
+
+          <Route path="*">
+            <NotFound></NotFound>
+          </Route>
+        </Switch>
+      </Router>
+    </UserContext.Provider >
   );
 }
 
