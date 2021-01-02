@@ -8,7 +8,6 @@ import { UserContext } from '../../../App';
 const NewsFeed = () => {
   const [memes, setMemes] = useState([]);
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [pageState, setPageState] = useState(null)
   const [comment, setComment] = useState();
@@ -19,8 +18,6 @@ const NewsFeed = () => {
         if (response) {
           setMemes(response.data)
           setIsLoading(false)
-        } else {
-          setMessage('No result found')
         }
       })
   }, [pageState])
