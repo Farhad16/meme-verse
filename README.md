@@ -26,12 +26,8 @@ and show in the top of the page. Users can also comment and like in the posts. I
 ### Prerequisites
 
 What things you need to install for this projects.
-### `npm`
-### `node js`
-### `react`
-### `git`
-### `code editor`
-### `browser`
+### `npm` `node js` `react` `git` 
+`code editor` `browser`
 
 ### Installing
 
