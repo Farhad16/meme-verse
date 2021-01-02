@@ -31,7 +31,7 @@ const Login = () => {
 				if (response.data.code === 401) {
 					setError(response.data.status);
 				} else {
-					sessionStorage.setItem('token', response.data.token);
+					localStorage.setItem('token', response.data.token);
 					setLoggedInUser(loginData);
 					setError('')
 					if (from) {

@@ -8,7 +8,7 @@ const PrivateRoute = ({ children, ...rest }) => {
 	const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
 	const isLoggedIn = () => {
-		const token = sessionStorage.getItem('token');
+		const token = localStorage.getItem('token');
 		if (!token) {
 			return false;
 		}

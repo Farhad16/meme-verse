@@ -49,7 +49,7 @@ const UploadImage = ({ handlePageChange }) => {
   }
 
   return (
-    <div className="upload">
+    <div className="col-md-12 my-3 upload">
       <div className="mt-3">
         <form action="" onSubmit={handleSubmit(onSubmit)}>
           <button onClick={() => removeImage()} className={file ? 'remove-img' : 'displayNone'}>X</button>

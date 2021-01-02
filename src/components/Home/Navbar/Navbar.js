@@ -27,7 +27,7 @@ const Navbar = () => {
 						{
 							loggedInUser.username ?
 								<li className="nav-item">
-									<Link to="/login" onClick={() => { setLoggedInUser({}); sessionStorage.clear() }} className="nav-link">Logout</Link>
+									<Link to="/login" onClick={() => { setLoggedInUser({}); localStorage.clear() }} className="nav-link">Logout</Link>
 								</li>
 
 								:
