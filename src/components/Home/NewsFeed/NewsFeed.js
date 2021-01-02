@@ -13,7 +13,7 @@ const NewsFeed = () => {
   const [comment, setComment] = useState();
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/memes')
+    axios.get('https://protected-fortress-52581.herokuapp.com/api/memes')
       .then(response => {
         if (response) {
           setMemes(response.data)
@@ -37,7 +37,7 @@ const NewsFeed = () => {
       username
     }
     if (event.keyCode === 13) {
-      const url = `http://localhost:5000/api/write-comment`
+      const url = `https://protected-fortress-52581.herokuapp.com/api/write-comment`
       axios.post(url, {
         commentData: commentData
       })
@@ -61,7 +61,7 @@ const NewsFeed = () => {
       username
     }
     if (status === true) {
-      const url = `http://localhost:5000/api/remove-like`
+      const url = `https://protected-fortress-52581.herokuapp.com/api/remove-like`
       axios.delete(url, {
         data: {
           likeData: likeData
@@ -74,7 +74,7 @@ const NewsFeed = () => {
           console.log(error);
         })
     } else {
-      const url = `http://localhost:5000/api/give-like`
+      const url = `https://protected-fortress-52581.herokuapp.com/api/give-like`
       axios.post(url, {
         likeData: likeData
       })

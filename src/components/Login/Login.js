@@ -24,7 +24,7 @@ const Login = () => {
 
 
 	const onSubmit = (data, e) => {
-		axios.post('http://localhost:5000/api/login', {
+		axios.post('https://protected-fortress-52581.herokuapp.com/api/login', {
 			loginData: loginData
 		})
 			.then(response => {

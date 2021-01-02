@@ -20,7 +20,7 @@ const UploadImage = ({ handlePageChange }) => {
     formData.append('file', file);
     formData.append('username', loggedInUser.username);
 
-    fetch('http://localhost:5000/api/upload-image', {
+    fetch('https://protected-fortress-52581.herokuapp.com/api/upload-image', {
       method: 'POST',
       body: formData,
       // headers: {

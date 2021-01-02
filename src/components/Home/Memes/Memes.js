@@ -82,7 +82,7 @@ const Memes = ({ meme, writeAComment, pageState, handleLike }) => {
   const [individualLike, setindividualLike] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/comments/${_id}`)
+    axios.get(`https://protected-fortress-52581.herokuapp.com/api/comments/${_id}`)
       .then(response => {
         if (response) {
           setAllComments(response.data)
@@ -92,7 +92,7 @@ const Memes = ({ meme, writeAComment, pageState, handleLike }) => {
   }, [_id, allComments]);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/likes/${_id}`)
+    axios.get(`https://protected-fortress-52581.herokuapp.com/api/likes/${_id}`)
       .then(response => {
         if (response) {
           setAllLikes(response.data)
@@ -107,7 +107,7 @@ const Memes = ({ meme, writeAComment, pageState, handleLike }) => {
       username,
       _id
     }
-    axios.post(`http://localhost:5000/api/userlikes`, {
+    axios.post(`https://protected-fortress-52581.herokuapp.com/api/userlikes`, {
       userLikes: userLikes
     })
       .then(response => {
@@ -115,7 +115,7 @@ const Memes = ({ meme, writeAComment, pageState, handleLike }) => {
           setColor(!color);
         }
       });
-  }, []);
+  }, [username]);
 
   const openModal = (allLikes) => {
     setindividualLike(allLikes)

@@ -18,7 +18,7 @@ const Registration = () => {
   }
 
   const onSubmit = (data, e) => {
-    axios.post('http://localhost:5000/api/register', {
+    axios.post('https://protected-fortress-52581.herokuapp.com/api/register', {
       registerData: registerData
     })
       .then(response => {
