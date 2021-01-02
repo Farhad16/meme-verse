@@ -45,7 +45,6 @@ const NewsFeed = () => {
         commentData: commentData
       })
         .then(response => {
-          setComment(response.data);
           handlePageChange(response.data);
           event.target.value = '';
         })
@@ -54,6 +53,43 @@ const NewsFeed = () => {
         })
     }
     event.preventDefault();
+  }
+
+  const handleLike = (color, _id) => {
+    const status = color;
+    const id = _id;
+    const username = loggedInUser.username;
+    const likeData = {
+      id,
+      username
+    }
+    if (status === true) {
+      const url = `http://localhost:5000/api/remove-like`
+      axios.delete(url, {
+        data: {
+          likeData: likeData
+        }
+      })
+        .then(response => {
+          handlePageChange(response.data);
+        })
+        .catch(function (error) {
+          console.log(error);
+        })
+    } else {
+      const url = `http://localhost:5000/api/give-like`
+      axios.post(url, {
+        likeData: likeData
+      })
+        .then(response => {
+          handlePageChange(response.data);
+        })
+        .catch(function (error) {
+          console.log(error);
+        })
+    }
+
+
   }
 
   return (
@@ -76,6 +112,7 @@ const NewsFeed = () => {
                   key={meme._id}
                   meme={meme}
                   writeAComment={writeAComment}
+                  handleLike={handleLike}
                 />
               )
           }

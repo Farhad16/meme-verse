@@ -18,3 +18,31 @@
   font-size: 12px;
   font-weight: 700;
 }
+
+
+.modal-style {
+  width: 500px;
+  min-height: 400px;
+}
+
+.modal-header {
+  border-bottom: 1px solid #dddddd;
+  margin: 0;
+  padding: 0;
+}
+
+.totalLike {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+.close-modal {
+  z-index: 1000;
+  padding: 3px 10px;
+  font-size: 16px;
+  border: none;
+  color: #000000;
+  background: #E5E7EA;
+  border-radius: 20px;
+}
