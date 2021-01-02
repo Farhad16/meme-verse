@@ -59,7 +59,7 @@ const Registration = () => {
           <input type="password" name="password" onBlur={handleBlur} placeholder="Password" required /><br />
           <input type="password" name="password1" onBlur={handleBlur} placeholder="Confirm Password" required /><br />
           <br />
-          <p className="note">
+          <p className="credential">
             ( Passwor at least 6 characters, must contain at least one <br />
            lower-case letter, one numeric digit and a special character )
           </p>

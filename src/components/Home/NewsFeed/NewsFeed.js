@@ -91,11 +91,11 @@ const NewsFeed = () => {
 
   return (
     <div className="news-feed">
-      <div className="feeds">
-        <div className="max-width">
+      <div className="max-width feeds">
+        <div className="row my-3">
           <UploadImage handlePageChange={handlePageChange}></UploadImage>
         </div>
-        <div className="row max-width">
+        <div className="row mt-3">
           {
             isLoading ?
               <div className="col-md-12 d-flex justify-content-center py-5">

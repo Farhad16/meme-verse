@@ -77,6 +77,12 @@ input[type="password"] {
 	font-weight: 600;
 }
 
+.credential {
+	font-size: 12px;
+	font-weight: 500;
+	color: rgb(126, 126, 126);
+}
+
 .note a {
 	text-decoration: none !important;
 }

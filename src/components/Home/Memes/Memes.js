@@ -71,7 +71,7 @@ Modal.setAppElement('#root')
 
 const Memes = ({ meme, writeAComment, pageState, handleLike }) => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  const { username, image, _id } = meme;
+  const { username, imageUrl, _id } = meme;
   const ref = useRef();
   const classes = useStyles();
   const [expanded, setExpanded] = useState(false);
@@ -134,7 +134,7 @@ const Memes = ({ meme, writeAComment, pageState, handleLike }) => {
   }
 
   return (
-    <div className="col-md-12 my-3">
+    <div className="col-md-12 mt-3">
       <Card className={classes.root}>
         <CardHeader
           avatar={
@@ -146,7 +146,7 @@ const Memes = ({ meme, writeAComment, pageState, handleLike }) => {
         />
         <CardMedia
           className={classes.media}
-          image={`data:image/png;base64,${image.img}`}
+          image={imageUrl}
           title="Paella dish"
         />
         <CardActions disableSpacing className={classes.alignAndBorder}>
