@@ -8,6 +8,7 @@ const Registration = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState({});
   const history = useHistory();
+  const [checking, setChecking] = useState(false);
 
   const { handleSubmit } = useForm();
 
@@ -18,6 +19,7 @@ const Registration = () => {
   }
 
   const onSubmit = (data, e) => {
+    setChecking(true);
     axios.post('https://protected-fortress-52581.herokuapp.com/api/register', {
       registerData: registerData
     })
@@ -35,7 +37,8 @@ const Registration = () => {
           setError(response.data.status);
         }
         else {
-          setSuccess(response.data)
+          setSuccess(response.data);
+          setChecking(false);
           setError('')
           alert('Registration success');
           history.replace('/home')
@@ -52,6 +55,12 @@ const Registration = () => {
   return (
     <div className="signInAndSignUp">
       <div className="signUp">
+        {
+          checking
+            ?
+            <p className="waiting mb-3">Register in progress please wait....</p>
+            : ''
+        }
         <form action="" onSubmit={handleSubmit(onSubmit)}>
           <h5>Create an account</h5>
 

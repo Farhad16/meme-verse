@@ -139,3 +139,13 @@ input[type="password"] {
 #remember {
 	padding-right: 10px;
 }
+
+.waiting {
+	font-size: 12px;
+	background: rgb(2, 141, 6);
+	color: #ffffff;
+	width: 250px;
+	margin: 0 auto;
+	padding: 3px;
+	border-radius: 5px;
+}

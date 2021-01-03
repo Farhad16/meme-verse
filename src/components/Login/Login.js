@@ -11,6 +11,7 @@ const Login = () => {
 	const [error, setError] = useState('');
 	const [loginData, setLoginData] = useState({});
 	const { handleSubmit } = useForm();
+	const [checking, setChecking] = useState(false);
 
 	const history = useHistory();
 	const location = useLocation();
@@ -24,6 +25,7 @@ const Login = () => {
 
 
 	const onSubmit = (data, e) => {
+		setChecking(true);
 		axios.post('https://protected-fortress-52581.herokuapp.com/api/login', {
 			loginData: loginData
 		})
@@ -33,12 +35,13 @@ const Login = () => {
 				} else {
 					localStorage.setItem('token', response.data.token);
 					setLoggedInUser(loginData);
-					setError('')
+					setChecking(false);
+					setError('');
 					if (from) {
 						history.replace(from)
 					}
-					history.replace("/")
 					alert('Login success');
+					history.replace("/")
 					e.target.reset();
 				}
 			})
@@ -52,6 +55,12 @@ const Login = () => {
 	return (
 		<div className="signInAndSignUp">
 			<div className="signUp">
+				{
+					checking
+						?
+						<p className="waiting mb-3">Checking please wait....</p>
+						: ''
+				}
 				<form action="" onSubmit={handleSubmit(onSubmit)}>
 					<h5>Login</h5>
 					<input type="text" name="username" onBlur={handleBlur} placeholder="Username or Email" required /><br />
