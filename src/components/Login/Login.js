@@ -32,6 +32,7 @@ const Login = () => {
 			.then(response => {
 				if (response.data.code === 401) {
 					setError(response.data.status);
+					setChecking(false);
 				} else {
 					localStorage.setItem('token', response.data.token);
 					setLoggedInUser(loginData);

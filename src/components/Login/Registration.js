@@ -24,17 +24,9 @@ const Registration = () => {
       registerData: registerData
     })
       .then(response => {
-        if (response.data.code === 1000) {
+        if (response.data.code === 500) {
           setError(response.data.status);
-        }
-        else if (response.data.code === 1100) {
-          setError(response.data.status);
-        }
-        else if (response.data.code === 1200) {
-          setError(response.data.status);
-        }
-        else if (response.data.code === 1300) {
-          setError(response.data.status);
+          setChecking(false);
         }
         else {
           setSuccess(response.data);
